@@ -15,9 +15,19 @@
   --font-size-small : 11px;
 
   /* Breakpoint */
-  --sm: 576px,
-  --md: 768px,
-  --lg: 992px,
-  --xl: 1200px,
-  --xxl: 1400px
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
+
+  /* Font */
+  --sans-serif: Roboto, Arial, Helvetica, sans-serif;
+
+  /* Font Weight */
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
 }
