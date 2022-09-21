@@ -1,0 +1,23 @@
+:root{
+  /* Color */
+  --purple: #5239EE;
+  --black-1: #1E1927;
+  --black-2: #4A4453;
+  --black-3: #7A7485;
+  --white-1: #FFF;
+  --white-2: #FDF7FF;
+  --white-3: #B1CBD3;
+
+  /* Typography Size */
+  --font-size-4: 36px;
+  --font-size-5: 24px;
+  --font-size-6: 16px;
+  --font-size-small : 11px;
+
+  /* Breakpoint */
+  --sm: 576px,
+  --md: 768px,
+  --lg: 992px,
+  --xl: 1200px,
+  --xxl: 1400px
+}
