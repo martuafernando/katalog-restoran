@@ -1,16 +1,18 @@
 :root{
   /* Color */
   --purple: #5239EE;
-  --black-1: #1E1927;
-  --black-2: #4A4453;
-  --black-3: #7A7485;
+  --purple-2: #dcd7fc;
+  --black-1: #4A4453;
+  --black-2: #7A7485;
+  --black-3: #AFA8BA;
   --white-1: #FFF;
   --white-2: #FDF7FF;
-  --white-3: #B1CBD3;
+  --yellow: #FF7C54;
 
   /* Typography Size */
-  --font-size-4: 36px;
-  --font-size-5: 24px;
+  --font-size-3: 38px;
+  --font-size-4: 29px;
+  --font-size-5: 21px;
   --font-size-6: 16px;
   --font-size-small : 11px;
 
