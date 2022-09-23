@@ -59,6 +59,20 @@ h3, .h3{
   font-size: var(--font-size-6);
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--purple);
+  color: var(--white-1);
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 section, header, footer{
   padding-top: 24px;
   padding-bottom: 24px;
@@ -75,6 +89,10 @@ header input[type=text]:focus, button:focus{
 
 a:focus{
   outline-color: var(--yellow);
+}
+
+main{
+  padding-top: 24px;
 }
 
 /* Navbar Start */
@@ -127,7 +145,7 @@ header > .text-header{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 80%;
 }
 
 header > div > p{
@@ -141,6 +159,7 @@ header .form-group{
   margin-right: auto;
   margin-top: 24px;
   width: 100%;
+  max-width:var(--sm);
 }
 
 header button{
@@ -162,6 +181,7 @@ header button:hover{
 header input[type=text]{
   border-radius: 8px 0 0 8px;
   padding: 8px 12px;
+  flex-grow: 1;
   border: none;
   box-shadow: 0 2px 16px 0px rgba(74, 68, 83, 0.2);
   
@@ -172,6 +192,10 @@ header > img{
   filter: brightness(0.7);
   border-radius: 24px;
   width: 100%;
+}
+
+header button > span{
+  display: none;
 }
 
 /* Header End */
