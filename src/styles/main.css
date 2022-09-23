@@ -141,14 +141,13 @@ header .form-group{
   margin-right: auto;
   margin-top: 24px;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 header button{
   font-weight: var(--semi-bold);
   background-color: var(--purple);
   color: var(--white-1);
-  border-radius: 8px!important;
+  border-radius: 0 8px 8px 0!important;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -161,9 +160,11 @@ header button:hover{
 }
 
 header input[type=text]{
-  border-radius: 8px;
-  padding: 16px 24px;
+  border-radius: 8px 0 0 8px;
+  padding: 8px 12px;
   border: none;
+  box-shadow: 0 2px 16px 0px rgba(74, 68, 83, 0.2);
+  
 }
 
 header > img{
@@ -190,6 +191,7 @@ header > img{
   background-color: var(--purple);
   color: var(--white-1);
   font-weight: var(--semi-bold);
+  text-align: center;
 }
 
 #service > div > a:hover{
@@ -262,10 +264,6 @@ header > img{
   gap: 36px;
 }
 
-#list-restoran .item{
-  text-align: center;
-}
-
 #list-restoran .item > img{
   border-radius: 24px;
 }
@@ -274,7 +272,10 @@ header > img{
   margin-top: 16px;
   font-weight: var(--semi-bold);
   display: flex;
+  flex-direction: column;
+  gap: 8px;
   justify-content: space-between;
+  text-align: center;
 }
 
 #list-restoran .deskripsi > .star{
@@ -336,6 +337,18 @@ footer > p{
   margin-top: 32px;
 }
 /* Footer End */
+
+@media (max-width: 320px) {
+  header > .text-header{
+    top: 32px;
+    transform: translate(-50%, 0);
+    width: 80%;
+  }
+
+  button, .btn{
+    padding: 12px 16px;
+  }
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {}
