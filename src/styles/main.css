@@ -97,10 +97,6 @@ main{
 
 /* Navbar Start */
 nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 16px;
   box-shadow: 0 2px 16px 0px rgba(74, 68, 83, 0.2);
   position: fixed;
   background-color: var(--white-1);
@@ -108,16 +104,36 @@ nav{
   left: 0;
   right: 0;
   top: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-nav > ul{
+nav > .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > .container > ul{
+  display: none!important;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   gap: 16px;
-  color: var(--black-3);
-  font-weight: var(--bold);
+  color: var(--black-2);
+  font-weight: var(--semi-bold);
+}
+
+nav > .container li:hover a{
+  color: var(--purple);
+}
+
+nav > .container > a:nth-child(3){
+  display: none!important;
+  font-weight: var(--semi-bold);
+  color: var(--white-1)!important;
+  background-color: var(--purple);
 }
 
 .hamburger-menu{
@@ -224,18 +240,19 @@ header button > span{
   font-weight: var(--semi-bold);
 }
 
-#service .h2{
+#service > div .h2{
   font-weight: var(--semi-bold);
 }
 
-#service > .h3{
-  margin-top: 16px;
+#service > div .h3{
+  margin-top: 8px;
 }
 
 #service .content{
   display: grid;
   margin-top: 36px;
   gap: 16px;
+  align-items: stretch;
   grid-template-columns: 1fr;
 }
 
@@ -338,7 +355,7 @@ footer li> a{
   display: block;
   width: 48px;
   height: 48px;
-  line-height: 48px;
+  line-height: 50px;
   text-align: center;
   background-color: var(--white-1);
   border-radius: 100%;
@@ -374,17 +391,76 @@ footer > p{
   }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  #service .content,
+  #list-restoran .content,
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .hamburger-menu{
+    display: none!important;
+  }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {}
+  nav > .container > ul{
+    display: flex!important;
+  }
 
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+  nav > .container > a:nth-child(3){
+    display: inline!important;
+  }
+}
 
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #list-restoran .content{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .text-header > .h1{
+    font-size: var(--font-size-1);
+  }
+
+  .text-header > P{
+    font-size: var(--font-size-4);
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #service .content{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  #list-restoran .content{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #list-restoran .item > .deskripsi{
+    flex-direction: row;
+  }
+
+  h1, .h1{
+    font-size: var(--font-size-2);
+  }
+  h2, .h2{
+    font-size: var(--font-size-3);
+  }
+  h3, .h3{
+    font-size: var(--font-size-5);
+  }
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .container{
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
