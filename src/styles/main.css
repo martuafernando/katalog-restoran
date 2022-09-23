@@ -12,9 +12,18 @@ body{
   font-size: var(--font-size-6);
 }
 
-a{
+a, button{
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s;
+}
+
+a:hover, button:hover{
+  transition: all 0.3s;
+}
+
+button{
+  cursor: pointer;
 }
 
 button, .btn{
@@ -41,13 +50,13 @@ button{
 }
 
 h1, .h1{
-  font-size: var(--font-size-3);
-}
-h2, .h2{
   font-size: var(--font-size-4);
 }
-h3, .h3{
+h2, .h2{
   font-size: var(--font-size-5);
+}
+h3, .h3{
+  font-size: var(--font-size-6);
 }
 
 section, header, footer{
@@ -59,12 +68,28 @@ section{
   margin-top: 48px;
 }
 
+
+header input[type=text]:focus, button:focus{
+  outline-color: var(--yellow);
+}
+
+a:focus{
+  outline-color: var(--yellow);
+}
+
 /* Navbar Start */
 nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 16px 0px rgba(74, 68, 83, 0.2);
+  position: fixed;
+  background-color: var(--white-1);
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 nav > ul{
@@ -81,11 +106,17 @@ nav > ul{
   color: var(--white-1)!important;
   background-color: var(--purple);
 }
+
+.hamburger-menu:hover{
+  color: var(--purple)!important;
+  background-color: var(--purple-2);
+}
 /* Navbar End */
 
 /* Header Start */
 header{
   position: relative;
+  margin-top: 64px;
 }
 
 header > .text-header{
@@ -96,7 +127,7 @@ header > .text-header{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 90%;
 }
 
 header > div > p{
@@ -110,24 +141,29 @@ header .form-group{
   margin-right: auto;
   margin-top: 24px;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 header button{
+  font-weight: var(--semi-bold);
   background-color: var(--purple);
   color: var(--white-1);
-  border-radius: 0 8px 8px 0!important;
-  flex-grow: 1;
+  border-radius: 8px!important;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: var(--font-size-6);
+}
+
+header button:hover{
+  background-color: var(--purple-2);
+  color: var(--purple);
 }
 
 header input[type=text]{
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
   padding: 16px 24px;
   border: none;
-  flex-grow: 10;
-}
-
-header input[type=text]:focus{
-  outline-color: var(--purple);
 }
 
 header > img{
@@ -151,6 +187,12 @@ header > img{
 }
 
 #service > div > a{
+  background-color: var(--purple);
+  color: var(--white-1);
+  font-weight: var(--semi-bold);
+}
+
+#service > div > a:hover{
   background-color: var(--purple-2);
   color: var(--purple);
   font-weight: var(--semi-bold);
@@ -244,9 +286,12 @@ header > img{
 /* Footer Start */
 footer{
   background-color: var(--purple);
+}
+
+.grid{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 16px;
 }
 
 footer img{
@@ -263,15 +308,32 @@ footer ul{
 }
 
 footer li> a{
-  font-size: 36px;
+  box-sizing: border-box;
+  font-size: 28px;
   display: block;
-  width: 64px;
-  height: 64px;
-  line-height: 64px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
   text-align: center;
   background-color: var(--white-1);
   border-radius: 100%;
   color: var(--purple);
+}
+
+footer li:hover > a .fa-instagram{
+  color: #E1306C;
+  transition: all 0.3s;
+}
+
+footer li:hover > a .fa-github{
+  color: #333;
+  transition: all 0.3s;
+}
+
+footer > p{
+  text-align: center;
+  color: var(--white-1);
+  margin-top: 32px;
 }
 /* Footer End */
 

@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/logos/favicon.png" type="image/x-icon">
   <title>Restaurant Apps Starter Project</title>
 </head>
 <body>
   <nav>
-    <img src="./images/logos/logo.png" width="150" alt="">
+    <img src="./images/logos/logo.png" width="150" alt="CariResto Logo">
     <!-- <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">Promo</a></li>
@@ -15,7 +16,7 @@
       <li><a href="#">Di Sekitar</a></li>
     </ul>
     <a class="btn" href="#">Contact Us</a> -->
-    <a class="btn hamburger-menu" href="#"><i class="fa-solid fa-bars"></i></a>
+    <a class="btn hamburger-menu" href="#" tabindex="0"><i class="fa-solid fa-bars"></i></a>
   </nav>
 
   <header class="container-fluid">
@@ -24,97 +25,104 @@
       <p>Bingung mau makan di mana? Cari Resto Solusinya!</p>
       <form class="form-group">
         <input type="text" name="search" id="search-field" placeholder="Mau makan dimana hari ini?">
-        <button type="submit" href="test" class="btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        <button type="submit" href="test" class="btn"><i class="fa-solid fa-magnifying-glass"></i> <span>Search</span></button>
       </form>
     </div>
     <img src="./images/heros/hero-image_2.jpg" alt="">
   </header>
 
-  <section class="container-fluid" id="service">
-    <div>
+  <main>
+
+    <section class="container-fluid" id="service">
       <div>
-        <p class="h2">Kenapa Kami?</p>
-        <p class="h3">Tinggal Klik, sat set sat set</p>
+        <div>
+          <p class="h2">Kenapa Kami?</p>
+          <p class="h3">Tinggal Klik, sat set sat set</p>
+        </div>
+        <a class="btn" href="#">See More</a>
       </div>
-      <a class="btn" href="#">See More</a>
-    </div>
-    <div class="content">
-      <div class="item">
-        <div class="icon"><i class="fa-solid fa-thumbs-up"></i></div>
-        <p class="h3">Mudah</p>
-        <p>Pencarian dapat dilakukan dengan mudah</p>
+      <div class="content">
+        <div class="item">
+          <div class="icon"><i class="fa-solid fa-thumbs-up"></i></div>
+          <p class="h3">Mudah</p>
+          <p>Pencarian dapat dilakukan dengan mudah</p>
+        </div>
+        <div class="item">
+          <div class="icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <p class="h3">Cepat</p>
+          <p>Pencarian langsung muncul di hadapanmu</p>
+        </div>
+        <div class="item">
+          <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+          <p class="h3">Akurat</p>
+          <p>Lokasi Restoran akurat</p>
+        </div>
+        <div class="item">
+          <div class="icon"><i class="fa-solid fa-list-check"></i></div>
+          <p class="h3">Banyak Pilihan</p>
+          <p>Ada banyak pilihan untukmu</p>
+        </div>
       </div>
-      <div class="item">
-        <div class="icon"><i class="fa-solid fa-gauge-high"></i></div>
-        <p class="h3">Cepat</p>
-        <p>Pencarian langsung muncul di hadapanmu</p>
+    </section>
+  
+    <section class="container-fluid" id="list-restoran">
+      <h2>Mungkin Kamu Suka</h2>
+      <p>Rekomendasi restoran untukmu</p>
+      <div class="content">
+        <div class="item">
+          <img src="./images/heros/hero-image_4.jpg" alt="">
+          <div class="deskripsi">
+            <p class="h3">Bring Your Phone Cafe</p>
+            <p class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="./images/heros/hero-image_4.jpg" alt="">
+          <div class="deskripsi">
+            <p class="h3">Bring Your Phone Cafe</p>
+            <p class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="./images/heros/hero-image_4.jpg" alt="">
+          <div class="deskripsi">
+            <p class="h3">Bring Your Phone Cafe</p>
+            <p class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="item">
-        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-        <p class="h3">Akurat</p>
-        <p>Lokasi Restoran akurat</p>
+    </section>
+  
+    <footer>
+      <div class="grid">
+        <img src="./images/logos/logo-white.png" alt="">
+        <ul class="social-media">
+          <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+        </ul>
       </div>
-      <div class="item">
-        <div class="icon"><i class="fa-solid fa-list-check"></i></div>
-        <p class="h3">Banyak Pilihan</p>
-        <p>Ada banyak pilihan untukmu</p>
-      </div>
-    </div>
-  </section>
+      <p>Copyright © 2020 - CariResto</p>
+    </footer>
+  </main>
 
-  <section class="container-fluid" id="list-restoran">
-    <h2>Mungkin Kamu Suka</h2>
-    <p>Rekomendasi restoran untukmu</p>
-    <div class="content">
-      <div class="item">
-        <img src="./images/heros/hero-image_4.jpg" alt="">
-        <div class="deskripsi">
-          <p class="h3">Bring Your Phone Cafe</p>
-          <p class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </p>
-        </div>
-      </div>
-      <div class="item">
-        <img src="./images/heros/hero-image_4.jpg" alt="">
-        <div class="deskripsi">
-          <p class="h3">Bring Your Phone Cafe</p>
-          <p class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </p>
-        </div>
-      </div>
-      <div class="item">
-        <img src="./images/heros/hero-image_4.jpg" alt="">
-        <div class="deskripsi">
-          <p class="h3">Bring Your Phone Cafe</p>
-          <p class="star">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <img src="./images/logos/logo-white.png" alt="">
-    <ul class="social-media">
-      <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-github"></i></a></li>
-    </ul>
-  </footer>
 
 </body>
 </html>
