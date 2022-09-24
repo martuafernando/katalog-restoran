@@ -34,7 +34,7 @@ function main(){
   const dataRestoranContainer = document.getElementById('data-restoran');
   dataSource.restaurants.forEach(restoran => {
     dataRestoranContainer.innerHTML += `
-    <div class="item">
+    <div class="item" tabindex="0">
       <img src="${restoran.pictureId}" alt="${restoran.name}">
       <div class="deskripsi">
         <p class="h3">${restoran.name}</p>

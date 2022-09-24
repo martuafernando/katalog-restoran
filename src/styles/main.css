@@ -16,6 +16,9 @@ a, button{
   text-decoration: none;
   color: inherit;
   transition: all 0.3s;
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 a:hover, button:hover{
@@ -61,7 +64,7 @@ h3, .h3{
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -120px;
   left: 0;
   background-color: var(--purple);
   color: var(--white-1);
@@ -84,7 +87,7 @@ section{
 }
 
 
-header input[type=text]:focus, button:focus{
+header input[type=text]:focus, button:focus, div:focus{
   outline-color: var(--yellow);
 }
 
@@ -164,11 +167,20 @@ nav .container.menu ul{
 }
 
 nav .container.menu li{
-  animation:  downslide 0.3s alternate;
   transition: all 0.3s;
-  padding: 16px 0;
   margin: 2px 0;
   text-align: center;
+}
+
+nav .container.menu li a{
+  animation:  downslide 0.3s alternate;
+  padding: 16px;
+  display: block;
+}
+
+nav .container.menu li a:hover{
+  background-color: var(--purple);
+  color: var(--white-1);
 }
 
 .hamburger-menu{
