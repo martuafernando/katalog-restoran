@@ -355,6 +355,7 @@ header button > span{
   margin-top: 16px;
   font-weight: var(--semi-bold);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 8px;
   justify-content: space-between;
