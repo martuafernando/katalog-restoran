@@ -110,6 +110,7 @@ nav{
 }
 
 nav > .container{
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,16 +131,52 @@ nav > .container li:hover a{
   color: var(--purple);
 }
 
-nav > .container > a:nth-child(3){
+nav > .container > a:nth-child(4){
   display: none!important;
   font-weight: var(--semi-bold);
   color: var(--white-1)!important;
   background-color: var(--purple);
 }
 
+nav .container.menu img{
+  margin-right: auto;
+}
+
+@keyframes downslide{
+  0% {
+    padding: 0;
+  }
+
+  100% {
+    padding: 16px 0;
+  }
+}
+
+nav .container.menu{
+  flex-direction: column;
+}
+
+
+nav .container.menu ul{
+  display: block!important;
+  margin-top: 16px;
+  width: 100%;
+}
+
+nav .container.menu li{
+  animation:  downslide 0.3s alternate;
+  transition: all 0.3s;
+  padding: 16px 0;
+  margin: 2px 0;
+  text-align: center;
+}
+
 .hamburger-menu{
   color: var(--white-1)!important;
   background-color: var(--purple);
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .hamburger-menu:hover{
@@ -306,6 +343,10 @@ header button > span{
   gap: 36px;
 }
 
+#list-restoran .item{
+  position: relative;
+}
+
 #list-restoran .item > img{
   border-radius: 24px;
 }
@@ -318,6 +359,16 @@ header button > span{
   gap: 8px;
   justify-content: space-between;
   text-align: center;
+}
+
+#list-restoran .item > .deskripsi > .kota{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: var(--purple);
+  color: var(--white-1);
+  padding: 8px 16px;
+  border-radius: 0 8px 8px 0;
 }
 
 #list-restoran .deskripsi > .star{
@@ -399,6 +450,9 @@ footer > p{
   .grid{
     grid-template-columns: repeat(2, 1fr);
   }
+  header button > span{
+    display: inline;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -411,7 +465,7 @@ footer > p{
     display: flex!important;
   }
 
-  nav > .container > a:nth-child(3){
+  nav > .container > a:nth-child(4){
     display: inline!important;
   }
 }
