@@ -1,16 +1,6 @@
 import dataSource from '../DATA.json'
 
 function main () {
-  const hamburgerMenu = document.querySelector('.hamburger-menu')
-  const navbar = document.querySelector('nav .container')
-  hamburgerMenu.addEventListener('click', () => {
-    if (navbar.className === 'container') {
-      navbar.classList.add('responsive')
-    } else {
-      navbar.className = 'container'
-    }
-  })
-
   const getStar = (star) => {
     let i
     let res = ''

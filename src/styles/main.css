@@ -95,10 +95,6 @@ a:focus{
   outline-color: var(--yellow);
 }
 
-main{
-  padding-top: 24px;
-}
-
 /* Navbar Start */
 nav{
   box-shadow: 0 2px 16px 0px rgba(74, 68, 83, 0.2);

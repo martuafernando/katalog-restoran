@@ -11,8 +11,16 @@ import '@fortawesome/fontawesome-free/js/brands'
 // Script
 import App from './views/app'
 
-document.addEventListener('DOMContentLoaded', new App({
+const app = new App({
   button: document.querySelector('.hamburger-menu'),
   navbar: document.querySelector('nav .container'),
   content: document.querySelector('#mainContent')
-}))
+})
+
+window.addEventListener('hashchange', () => {
+  app.renderPage()
+})
+
+window.addEventListener('load', () => {
+  app.renderPage()
+})

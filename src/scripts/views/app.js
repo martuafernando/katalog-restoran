@@ -1,4 +1,6 @@
 import HamburgerInitiator from '../utils/hamburger_initiator'
+import UrlParser from '../routes/url-parser'
+import routes from '../routes/routes'
 
 class App {
   constructor ({ button, navbar, content }) {
@@ -15,6 +17,13 @@ class App {
       navbar: this._navbar,
       content: this._content
     })
+  }
+
+  async renderPage () {
+    const url = UrlParser.parseActiveUrlWithCombiner()
+    const page = routes[url]
+    this._content.innerHTML = await page.render()
+    await page.afterRender()
   }
 }
 
