@@ -5,7 +5,7 @@ function main () {
   const navbar = document.querySelector('nav .container')
   hamburgerMenu.addEventListener('click', () => {
     if (navbar.className === 'container') {
-      navbar.classList.add('menu')
+      navbar.classList.add('responsive')
     } else {
       navbar.className = 'container'
     }

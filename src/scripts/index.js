@@ -9,6 +9,10 @@ import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 
 // Script
-import script from './script'
+import App from './views/app'
 
-document.addEventListener('DOMContentLoaded', script)
+document.addEventListener('DOMContentLoaded', new App({
+  button: document.querySelector('.hamburger-menu'),
+  navbar: document.querySelector('nav .container'),
+  content: document.querySelector('#mainContent')
+}))
