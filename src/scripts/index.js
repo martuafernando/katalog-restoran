@@ -10,6 +10,7 @@ import '@fortawesome/fontawesome-free/js/brands'
 
 // Script
 import App from './views/app'
+import swRegister from './utils/sw-register'
 
 const app = new App({
   button: document.querySelector('.hamburger-menu'),
@@ -23,4 +24,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage()
+  swRegister()
 })
