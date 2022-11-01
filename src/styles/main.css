@@ -526,13 +526,6 @@ footer > p{
   header button > span{
     display: inline;
   }
-  #data-restaurant{
-    max-width: 80%;
-  }
-
-  #data-restaurant .row{
-    flex-direction: row;
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -547,6 +540,14 @@ footer > p{
 
   nav > .container > a:nth-child(4){
     display: inline!important;
+  }
+  #data-restaurant{
+    max-width: 80%;
+  }
+
+  #data-restaurant .row{
+    flex-direction: row-reverse;
+    gap: 32px;
   }
 }
 

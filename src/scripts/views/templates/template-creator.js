@@ -60,7 +60,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 
   <div class="col">
     <div class="container">
-      <p class="h3">Deskripsi Restaurant</p>
+      <p class="h3">Deskripsi Restoran</p>
       <p>${restaurant.description}</p>
     </div>
 
