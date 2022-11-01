@@ -4,6 +4,7 @@ import { createRestaurantItemTemplate } from '../templates/template-creator'
 const All = {
   async render () {
     return `
+    <feature-list></feature-list>
     <section class="container-fluid">
       <div class="container" id="list-restoran">
         <h2>Mungkin Kamu Suka</h2>

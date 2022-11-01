@@ -18,15 +18,60 @@ const createRestaurantItemTemplate = (restaurant) => `
 `
 
 const createRestaurantDetailTemplate = (restaurant) => `
-  <h2 class="">${restaurant.name}</h2>
-  <img class="" src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}" alt="${restaurant.name}" />
-  <div class="">
-  <h3>Information</h3>
-    <h4>City</h4>
-    <p>${restaurant.city}</p>
-    <h4>Address</h4>
+
+<h2>${restaurant.name}</h2>
+<img src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}" alt="${restaurant.name}" />
+<p class="star">
+  ${ratingToStar(restaurant.rating)}
+  <span class="small">(${restaurant.rating})</span>
+</p>
+
+<div class="row">
+  <div class="col">
+
+  <div class="container">
+    <p class="h3">Alamat</p>
     <p>${restaurant.address}</p>
   </div>
+
+  <div class="container">
+    <p class="h3">Kota</p>
+    <p>${restaurant.city}</p>
+  </div>
+
+  <div class="container">
+    <p class="h3">Makanan Tersedia</p>
+    <ul>
+      ${restaurant.menus.foods.map((food) => {
+        return '<li>' + food.name + '</li>'
+      }).join('')}
+    </ul>
+  </div>
+
+  <div class="container">
+    <p class="h3">Minuman Tersedia</p>
+    <ul>
+      ${restaurant.menus.drinks.map((drink) => {
+        return '<li>' + drink.name + '</li>'
+      }).join('')}
+    </ul>
+  </div>
+  </div>
+
+  <div class="col">
+    <div class="container">
+      <p class="h3">Deskripsi Restaurant</p>
+      <p>${restaurant.description}</p>
+    </div>
+
+    <div class="container">
+      <p class="h3">Review</p>
+      ${restaurant.customerReviews.map((review) => {
+        return '<div class="review"><p>' + review.name + ' (' + review.date + ')' + '</p><p>' + review.review + '</p></div>'
+      }).join('')}
+    </div>
+  </div>
+</div>
 `
 
 const createLikeButtonTemplate = () => `

@@ -6,11 +6,9 @@ import { createRestaurantDetailTemplate, createLikeButtonTemplate } from '../tem
 const Detail = {
   async render () {
     return `
-    <section class="container-fluid">
-      <div class="container" id="list-restoran">
-        <h2>Mungkin Kamu Suka</h2>
-        <p>Rekomendasi restoran untukmu</p>
-        <div class="content" id="data-restaurant"> </div>
+    <section class="container-fluid" id="detail">
+      <div class="container">
+        <div id="data-restaurant"></div>
       </div>
       <div id="likeButtonContainer"></div>
     </section>
