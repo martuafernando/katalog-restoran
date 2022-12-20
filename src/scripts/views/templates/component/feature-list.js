@@ -1,5 +1,5 @@
 const style = document.createElement('style')
-style.appendChild(document.createTextNode(styleSheet))
+style.appendChild(document.createTextNode(style))
 
 class FeatureList extends HTMLElement {
   constructor () {

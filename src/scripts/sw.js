@@ -1,7 +1,6 @@
 import 'regenerator-runtime'
 import CacheHelper from './utils/cache-helper'
 
-// Daftar asset yang akan dicaching
 const assetsToCache = [
   './',
   './icons/maskable_icon.png',
