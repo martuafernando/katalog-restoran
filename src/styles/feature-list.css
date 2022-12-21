@@ -1,0 +1,70 @@
+:host{
+  background-color: var(--white-2);
+}
+
+:host > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+:host > div > a{
+  background-color: var(--purple);
+  color: var(--white-1);
+  font-weight: var(--semi-bold);
+  text-align: center;
+}
+
+:host > div > a:hover{
+  background-color: var(--purple-2);
+  color: var(--purple);
+  font-weight: var(--semi-bold);
+}
+
+:host > div .h2{
+  font-weight: var(--semi-bold);
+}
+
+:host > div .h3{
+  margin-top: 8px;
+}
+
+:host .content{
+  display: grid;
+  margin-top: 36px;
+  gap: 16px;
+  align-items: stretch;
+  grid-template-columns: 1fr;
+}
+
+:host .item{
+  background-color: var(--white-1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+:host .item > .h3{
+  background-color: var(--white-1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: var(--semi-bold);
+}
+
+:host .item > .icon{
+  font-size: 24px;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  color: var(--purple);
+  background-color: var(--purple-2);
+  border-radius: 100%;
+  display: inline-block;
+  margin: auto;
+}

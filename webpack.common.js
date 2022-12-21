@@ -41,8 +41,8 @@ module.exports = {
         }
       ]
     }),
-    new WorkboxWebpackPlugin.GenerateSW({
-      swDest: path.resolve(__dirname, './sw.bundle.js')
-    })
+    // new WorkboxWebpackPlugin.GenerateSW({
+    //   swDest: path.resolve(__dirname, './sw.bundle.js')
+    // })
   ]
 }

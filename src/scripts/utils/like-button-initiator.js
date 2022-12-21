@@ -29,7 +29,7 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton')
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestaurantIdb.putRestaurant(this._restaurant)
+      (await FavoriteRestaurantIdb).putRestaurant(this._restaurant)
       this._renderButton()
     })
   },

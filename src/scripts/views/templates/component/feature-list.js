@@ -1,15 +1,19 @@
 const style = document.createElement('style')
-style.appendChild(document.createTextNode(style))
+style.appendChild(document.createTextNode('<link rel="stylesheet" href="../../../../styles/feature-list.css">'))
 
 class FeatureList extends HTMLElement {
   constructor () {
     super()
     this.shadowDOM = this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild()
+    this.shadowRoot.appendChild(style)
+  }
+
+  connectedCallback () {
+    this.render()
   }
 
   render () {
-    this.shadowDOM.innerHTML = `
+    this.shadowDOM.innerHTML += `
 <section class="container-fluid" id="service">
   <div class="container">
     <div>
