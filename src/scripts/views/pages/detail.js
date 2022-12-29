@@ -16,6 +16,7 @@ const Detail = {
   },
 
   async afterRender () {
+    document.getElementsByTagName('loading-indicator')[0].setAttribute('active', 'true')
     const url = UrlParser.parseActiveUrlWithoutCombiner()
     const restaurant = await dicodingRestaurantSource.detailRestaurant(url.id)
     const dataRestoranContainer = document.getElementById('data-restaurant')
@@ -28,6 +29,7 @@ const Detail = {
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant
     })
+    document.getElementsByTagName('loading-indicator')[0].removeAttribute('active')
   }
 }
 

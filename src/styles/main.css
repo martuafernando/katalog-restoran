@@ -5,6 +5,10 @@ html, body{
   padding: 0;
 }
 
+html{
+  position: relative;
+}
+
 body{
   font-family: var(--sans-serif);
   color: var(--black-1);

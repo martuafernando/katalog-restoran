@@ -18,11 +18,13 @@ const All = {
   },
 
   async afterRender () {
+    document.getElementsByTagName('loading-indicator')[0].setAttribute('active', 'true')
     const restaurant = await dicodingRestaurantSource.all()
     const dataRestoranContainer = document.getElementById('data-restaurant')
     restaurant.forEach((restaurant) => {
       dataRestoranContainer.innerHTML += createRestaurantItemTemplate(restaurant)
     })
+    document.getElementsByTagName('loading-indicator')[0].removeAttribute('active')
   }
 }
 

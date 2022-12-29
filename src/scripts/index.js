@@ -5,6 +5,7 @@ import '../styles/default.css'
 import '../scripts/views/component/app-bar/app-bar'
 import '../scripts/views/component/hero-element/hero-element'
 import '../scripts/views/component/app-footer/app-footer'
+import '../scripts/views/component/loading-indicator/loading-indicator'
 
 // Font Awesome
 import '@fortawesome/fontawesome-free'
