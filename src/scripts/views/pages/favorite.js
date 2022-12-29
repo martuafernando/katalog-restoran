@@ -19,7 +19,6 @@ const Favorite = {
     const restaurant = await favoriteDicodingRestaurantSource.getAllRestaurants()
     const dataRestoranContainer = document.getElementById('data-restaurant')
     restaurant.forEach((restaurant) => {
-      console.log(restaurant)
       dataRestoranContainer.innerHTML += createRestaurantItemTemplate(restaurant)
     })
   }

@@ -86,7 +86,7 @@ section{
 }
 
 
-header input[type=text]:focus, button:focus, div:focus{
+input:focus, button:focus, div:focus{
   outline-color: var(--yellow);
 }
 
@@ -94,7 +94,6 @@ a:focus{
   outline-color: var(--yellow);
 }
 
-/* Navbar Start */
 nav{
   box-shadow: 0 2px 16px 0px rgba(74, 68, 83, 0.2);
   position: fixed;
@@ -107,145 +106,10 @@ nav{
   padding-bottom: 8px;
 }
 
-nav > .container{
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav > .container > ul{
-  display: none!important;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 16px;
-  color: var(--black-2);
-  font-weight: var(--semi-bold);
-}
-
-nav > .container li:hover a{
-  color: var(--purple);
-}
-
-nav > .container > a:nth-child(4){
-  display: none!important;
-  font-weight: var(--semi-bold);
-  color: var(--white-1)!important;
-  background-color: var(--purple);
-}
-
-nav .container.responsive img{
-  margin-right: auto;
-}
-
-@keyframes downslide{
-  0% {
-    padding: 0;
-  }
-
-  100% {
-    padding: 16px 0;
-  }
-}
-
-nav .container.responsive{
-  flex-direction: column;
-}
-
-
-nav .container.responsive ul{
-  display: block!important;
-  margin-top: 16px;
-  width: 100%;
-}
-
-nav .container.responsive li{
-  transition: all 0.3s;
-  margin: 2px 0;
-  text-align: center;
-}
-
-nav .container.responsive li a{
-  animation:  downslide 0.3s alternate;
-  padding: 16px;
-  display: block;
-}
-
-nav .container.responsive li a:hover{
-  background-color: var(--purple);
-  color: var(--white-1);
-}
-
-.hamburger-menu{
-  color: var(--white-1)!important;
-  background-color: var(--purple);
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.hamburger-menu:hover{
-  color: var(--purple)!important;
-  background-color: var(--purple-2);
-}
-/* Navbar End */
-
 /* Header Start */
 header{
   position: relative;
   margin-top: 64px;
-}
-
-header > .text-header{
-  z-index: 1;
-  position: absolute;
-  text-align: center;
-  color: var(--white-1);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-}
-
-header > div > p{
-  margin-top: 16px;
-}
-
-header .form-group{
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 24px;
-  width: 100%;
-  max-width:var(--sm);
-}
-
-header button{
-  font-weight: var(--semi-bold);
-  background-color: var(--purple);
-  color: var(--white-1);
-  border-radius: 0 8px 8px 0!important;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  font-size: var(--font-size-6);
-}
-
-header button:hover{
-  background-color: var(--purple-2);
-  color: var(--purple);
-}
-
-header input[type=text]{
-  border-radius: 8px 0 0 8px;
-  padding: 8px 12px;
-  flex-grow: 1;
-  border: none;
-  box-shadow: 0 2px 16px 0px rgba(74, 68, 83, 0.2);
-  
 }
 
 header > img{
@@ -253,10 +117,6 @@ header > img{
   filter: brightness(0.7);
   border-radius: 24px;
   width: 100%;
-}
-
-header button > span{
-  display: none;
 }
 
 /* Header End */
@@ -387,42 +247,6 @@ footer{
   gap: 16px;
 }
 
-footer img{
-  margin: auto;
-  max-width: 200px;
-}
-
-footer ul{
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 16px;
-  margin: auto;
-}
-
-footer li> a{
-  box-sizing: border-box;
-  font-size: 28px;
-  display: block;
-  width: 48px;
-  height: 48px;
-  line-height: 50px;
-  text-align: center;
-  background-color: var(--white-1);
-  border-radius: 100%;
-  color: var(--purple);
-}
-
-footer li:hover > a .fa-instagram{
-  color: #E1306C;
-  transition: all 0.3s;
-}
-
-footer li:hover > a .fa-github{
-  color: #333;
-  transition: all 0.3s;
-}
-
 footer > p{
   text-align: center;
   color: var(--white-1);
@@ -431,12 +255,6 @@ footer > p{
 /* Footer End */
 
 @media (max-width: 320px) {
-  header > .text-header{
-    top: 32px;
-    transform: translate(-50%, 0);
-    width: 80%;
-  }
-
   button, .btn{
     padding: 12px 16px;
   }
@@ -444,13 +262,9 @@ footer > p{
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  #service .content,
   #list-restoran .content,
   .grid{
     grid-template-columns: repeat(2, 1fr);
-  }
-  header button > span{
-    display: inline;
   }
 }
 
@@ -460,13 +274,6 @@ footer > p{
     display: none!important;
   }
 
-  nav > .container > ul{
-    display: flex!important;
-  }
-
-  nav > .container > a:nth-child(4){
-    display: inline!important;
-  }
   #data-restaurant{
     max-width: 80%;
   }
@@ -482,22 +289,10 @@ footer > p{
   #list-restoran .content{
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .text-header > .h1{
-    font-size: var(--font-size-1);
-  }
-
-  .text-header > P{
-    font-size: var(--font-size-4);
-  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #service .content{
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
   #list-restoran .content{
     grid-template-columns: repeat(3, 1fr);
   }

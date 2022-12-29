@@ -1,0 +1,93 @@
+app-bar{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+app-bar > ul{
+  display: none!important;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  color: var(--black-2);
+  font-weight: var(--semi-bold);
+}
+
+app-bar li:hover a{
+  color: var(--purple);
+}
+
+app-bar > a:nth-of-type(2){
+  display: none!important;
+  font-weight: var(--semi-bold);
+  color: var(--white-1)!important;
+  background-color: var(--purple);
+}
+
+app-bar.responsive img{
+  margin-right: auto;
+}
+
+@keyframes downslide{
+  0% {
+    padding: 0;
+  }
+
+  100% {
+    padding: 16px 0;
+  }
+}
+
+app-bar.responsive{
+  flex-direction: column;
+}
+
+
+app-bar.responsive ul{
+  display: block!important;
+  margin-top: 16px;
+  width: 100%;
+}
+
+app-bar.responsive li{
+  transition: all 0.3s;
+  margin: 2px 0;
+  text-align: center;
+}
+
+app-bar.responsive li a{
+  animation:  downslide 0.3s alternate;
+  padding: 16px;
+  display: block;
+}
+
+app-bar.responsive li a:hover{
+  background-color: var(--purple);
+  color: var(--white-1);
+}
+
+app-bar .hamburger-menu{
+  color: var(--white-1)!important;
+  background-color: var(--purple);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+app-bar .hamburger-menu:hover{
+  color: var(--purple)!important;
+  background-color: var(--purple-2);
+}
+
+@media (min-width: 768px) {
+  app-bar > ul{
+    display: flex!important;
+  }
+
+  app-bar > a:nth-of-type(2){
+    display: inline!important;
+  }
+}

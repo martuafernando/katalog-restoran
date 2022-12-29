@@ -17,14 +17,13 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          }
-        ]
+        exclude: /styles/,
+        use: ['to-string-loader', 'css-loader']
+      },
+      {
+        test: /\.css$/,
+        include: /styles/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   },

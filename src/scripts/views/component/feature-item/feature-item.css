@@ -1,0 +1,31 @@
+feature-item{
+  background-color: var(--white-1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+feature-item > .h3{
+  background-color: var(--white-1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: var(--semi-bold);
+}
+
+feature-item > .icon{
+  font-size: 24px;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  color: var(--purple);
+  background-color: var(--purple-2);
+  border-radius: 100%;
+  display: inline-block;
+  margin: auto;
+}

@@ -2,7 +2,9 @@ import 'regenerator-runtime' /* for async await transpile */
 import '../styles/main.css'
 import '../styles/default.css'
 
-import './views/templates/component/feature-list'
+import '../scripts/views/component/app-bar/app-bar'
+import '../scripts/views/component/hero-element/hero-element'
+import '../scripts/views/component/app-footer/app-footer'
 
 // Font Awesome
 import '@fortawesome/fontawesome-free'
@@ -15,8 +17,8 @@ import App from './views/app'
 import swRegister from './utils/sw-register'
 
 const app = new App({
-  button: document.querySelector('.hamburger-menu'),
-  navbar: document.querySelector('nav .container'),
+  button: document.querySelector('app-bar .hamburger-menu'),
+  navbar: document.querySelector('app-bar'),
   content: document.querySelector('#mainContent')
 })
 

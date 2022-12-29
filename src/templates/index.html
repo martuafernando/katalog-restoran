@@ -5,57 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CariResto merupakan web yang pencari restoran yang cepat, aman, dan mudah">
-  <meta name="theme-color" content="#5239EE"/>
-    
+  <meta name="theme-color" content="#5239EE" />
+
   <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon">
   <link rel="manifest" href="./app.webmanifest">
   <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
 
   <title>Cari Resto | Web Pencari Restoran</title>
-  
+
   <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
 </head>
 
 <body>
   <a href="#list-restoran" class="skip-link" aria-label="menu">Menuju ke konten</a>
+
   <nav class="container-fluid">
-    <div class="container">
-      <img src="./images/logos/logo.png" width="150" alt="CariResto Logo">
-      <a class="btn hamburger-menu" href="#" tabindex="0"><i class="fa-solid fa-bars"></i></a>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="https://www.linkedin.com/in/martuafernando/">About Us</a></li>
-        <li><a href="#/favorite">Favorites</a></li>
-        <li><a href="#list-restoran">Restoran</a></li>
-      </ul>
-      <a class="btn" href="#">Contact Us</a>
-    </div>
+    <app-bar></app-bar>
   </nav>
 
   <header class="container">
-    <div class="text-header">
-      <h1 class="h1">Cari Resto Gampang dan Praktis</h1>
-      <p>Bingung mau makan di mana? Cari Resto Solusinya!</p>
-      <form class="form-group">
-        <input type="text" name="search" id="search-field" placeholder="Mau makan dimana hari ini?">
-        <button type="submit" href="test" class="btn"><i
-            class="fa-solid fa-magnifying-glass"></i><span>Search</span></button>
-      </form>
-    </div>
+    <hero-element></hero-element>
     <img src="./images/heros/hero-image_2.jpg" alt="">
   </header>
 
   <main id="mainContent"></main>
 
   <footer>
-    <div class="grid container">
-      <img src="./images/logos/logo-white.png" alt="">
-      <ul class="social-media">
-        <li><a href="https://www.instagram.com/martuafernando/" aria-label="instagram"><i
-              class="fa-brands fa-instagram"></i></a></li>
-        <li><a href="https://github.com/martuafernando" aria-label="github"><i class="fa-brands fa-github"></i></a></li>
-      </ul>
-    </div>
+    <app-footer></app-footer>
     <p>Copyright © 2020 - CariResto</p>
   </footer>
 

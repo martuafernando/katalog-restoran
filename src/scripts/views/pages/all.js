@@ -1,10 +1,12 @@
 import dicodingRestaurantSource from '../../data/dicoding-restaurant-resource'
 import { createRestaurantItemTemplate } from '../templates/template-creator'
 
+import '../component/feature-list/feature-list'
+
 const All = {
   async render () {
     return `
-    <feature-list></feature-list>
+    <feature-list class="container-fluid"></feature-list>
     <section class="container-fluid">
       <div class="container" id="list-restoran">
         <h2>Mungkin Kamu Suka</h2>

@@ -1,0 +1,78 @@
+hero-element{
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  color: var(--white-1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+
+hero-element > p{
+  margin-top: 16px;
+}
+
+hero-element .form-group{
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+  width: 100%;
+  max-width:var(--sm);
+}
+
+hero-element button{
+  font-weight: var(--semi-bold);
+  background-color: var(--purple);
+  color: var(--white-1);
+  border-radius: 0 8px 8px 0!important;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: var(--font-size-6);
+}
+
+hero-element button:hover{
+  background-color: var(--purple-2);
+  color: var(--purple);
+}
+
+hero-element input[type=text]{
+  border-radius: 8px 0 0 8px;
+  padding: 8px 12px;
+  flex-grow: 1;
+  border: none;
+  box-shadow: 0 2px 16px 0px rgba(74, 68, 83, 0.2);
+  
+}
+
+hero-element button > span{
+  display: none;
+}
+
+@media (max-width: 320px) {
+  hero-element{
+    top: 32px;
+    transform: translate(-50%, 0);
+    width: 80%;
+  }
+}
+
+@media (min-width: 576px) {
+  header button > span{
+    display: inline;
+  }
+}
+
+@media (min-width: 992px) {
+  hero-element > .h1{
+    font-size: var(--font-size-1);
+  }
+
+  hero-element > P{
+    font-size: var(--font-size-4);
+  }
+}
