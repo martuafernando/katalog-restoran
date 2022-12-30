@@ -90,7 +90,10 @@ section{
 }
 
 
-input:focus, button:focus, div:focus{
+input:focus,
+button:focus,
+div:focus,
+textarea:focus{
   outline-color: var(--yellow);
 }
 

@@ -1,5 +1,6 @@
 import CONFIG from '../../globals/config'
 import ratingToStar from '../../utils/rating-to-star'
+import '../component/review-container/review-container'
 
 const createRestaurantItemTemplate = (restaurant) => `
 <a href="/#/detail/${restaurant.id}">
@@ -56,6 +57,12 @@ const createRestaurantDetailTemplate = (restaurant) => `
       }).join('')}
     </ul>
   </div>
+
+  <div class="container">
+    <p class="h3">Komentar</p>
+    <review-container></review-container>
+  </div>
+
   </div>
 
   <div class="col">
@@ -64,7 +71,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
       <p>${restaurant.description}</p>
     </div>
 
-    <div class="container">
+    <div id="review-container" class="container">
       <p class="h3">Review</p>
       ${restaurant.customerReviews.map((review) => {
         return '<div class="review"><p>' + review.name + ' (' + review.date + ')' + '</p><p>' + review.review + '</p></div>'

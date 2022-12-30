@@ -12,6 +12,21 @@ class dicodingRestaurantSource {
     const responseJson = await response.json()
     return responseJson.restaurant
   }
+
+  static async sendReview (id, name, review) {
+    const response = await fetch(API_ENDPOINT.REVIEW, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id, name, review
+      })
+    })
+    const responseJson = await response.json()
+    return responseJson.customerReviews
+  }
 }
 
 export default dicodingRestaurantSource

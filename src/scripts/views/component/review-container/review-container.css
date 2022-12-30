@@ -1,0 +1,28 @@
+review-container {
+  display: block;
+}
+
+review-container label {
+  display: block;
+  font-size: var(--font-size-small);
+  margin-bottom: 8px;
+}
+
+review-container .form-group {
+  margin-top: 24px;
+}
+
+review-container input,
+review-container textarea{
+  background-color: var(--white-2);
+  border: 1px solid var(--purple-2);
+  border-radius: 8px;
+  width: 80%;
+  padding: 16px;
+}
+
+review-container button{
+  margin-top: 16px;
+  color: var(--purple-2);
+  background-color: var(--purple);
+}
