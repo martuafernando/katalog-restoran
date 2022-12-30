@@ -1,6 +1,8 @@
 import HamburgerInitiator from '../utils/hamburger_initiator'
 import UrlParser from '../routes/url-parser'
 import routes from '../routes/routes'
+import ErrorInitiator from '../utils/error-initiator'
+import LoadingInitiator from '../utils/loading-initiator'
 
 class App {
   constructor ({ button, navbar, content }) {
@@ -20,10 +22,18 @@ class App {
   }
 
   async renderPage () {
-    const url = UrlParser.parseActiveUrlWithCombiner()
-    const page = routes[url]
-    this._content.innerHTML = await page.render()
-    await page.afterRender()
+    try {
+      window.scroll(0, 0)
+      LoadingInitiator.init()
+      const url = UrlParser.parseActiveUrlWithCombiner()
+      const page = routes[url]
+      this._content.innerHTML = await page.render()
+      await page.afterRender()
+      LoadingInitiator.close()
+    } catch (error) {
+      LoadingInitiator.close()
+      ErrorInitiator.init('Error', error)
+    }
   }
 }
 

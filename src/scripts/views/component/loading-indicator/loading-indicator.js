@@ -4,11 +4,6 @@ const style = document.createElement('style')
 style.appendChild(document.createTextNode(styleSheet))
 
 class LoadingIndicator extends HTMLElement {
-  constructor () {
-    super()
-    this.appendChild(style)
-  }
-
   static get observedAttributes () {
     return ['active']
   }
@@ -16,27 +11,23 @@ class LoadingIndicator extends HTMLElement {
   connectedCallback () {
     this.active = this.getAttribute('active') || false
     this.render()
+    this.appendChild(style)
   }
 
-  attributeChangedCallback (attrName, oldVal, newVal) {
-    console.log('atribut diganti')
-    this.active = this.getAttribute('active') || false
-    this.render()
+  attributeChangedCallback () {
+    this.connectedCallback()
   }
 
   render () {
-    console.log('asfdasf')
     if (this.active === 'true') {
       this.innerHTML += `
         <div>
           <div class="spin"></div>
         </div>
       `
-      document.getElementsByTagName('loading-indicator')[0].style.display = 'block'
-      document.getElementsByTagName('body')[0].style.overflow = 'hidden'
+      this.style.display = 'block'
     } else {
-      document.getElementsByTagName('loading-indicator')[0].style.display = 'none'
-      document.getElementsByTagName('body')[0].style.overflow = 'auto'
+      this.style.display = 'none'
     }
   }
 }

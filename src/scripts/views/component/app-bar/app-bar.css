@@ -20,14 +20,14 @@ app-bar li:hover a{
   color: var(--purple);
 }
 
-app-bar > a:nth-of-type(2){
+app-bar > a:nth-of-type(3){
   display: none!important;
   font-weight: var(--semi-bold);
   color: var(--white-1)!important;
   background-color: var(--purple);
 }
 
-app-bar.responsive img{
+app-bar.responsive a:first-of-type{
   margin-right: auto;
 }
 
@@ -77,7 +77,8 @@ app-bar .hamburger-menu{
   top: 0;
 }
 
-app-bar .hamburger-menu:hover{
+app-bar .hamburger-menu:hover,
+app-bar > a:nth-of-type(3):hover{
   color: var(--purple)!important;
   background-color: var(--purple-2);
 }
@@ -87,7 +88,7 @@ app-bar .hamburger-menu:hover{
     display: flex!important;
   }
 
-  app-bar > a:nth-of-type(2){
+  app-bar > a:nth-of-type(3){
     display: inline!important;
   }
 }

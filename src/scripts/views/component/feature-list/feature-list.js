@@ -5,17 +5,14 @@ const style = document.createElement('style')
 style.appendChild(document.createTextNode(styleSheet))
 
 class FeatureList extends HTMLElement {
-  constructor () {
-    super()
-    this.appendChild(style)
-  }
-
   connectedCallback () {
     this.render()
+    this.appendChild(style)
+    this.classList.add('container-fluid')
   }
 
   render () {
-    this.innerHTML += `
+    this.innerHTML = `
   <div class="container">
     <div>
       <p class="h2">Kenapa Kami?</p>

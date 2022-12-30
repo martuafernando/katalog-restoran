@@ -1,5 +1,7 @@
 import dicodingRestaurantSource from '../../data/dicoding-restaurant-resource'
 import { createRestaurantItemTemplate } from '../templates/template-creator'
+import ErrorInitiator from '../../utils/error-initiator'
+import LoadingInitiator from '../../utils/loading-initiator'
 
 import '../component/feature-list/feature-list'
 
@@ -18,13 +20,11 @@ const All = {
   },
 
   async afterRender () {
-    document.getElementsByTagName('loading-indicator')[0].setAttribute('active', 'true')
     const restaurant = await dicodingRestaurantSource.all()
     const dataRestoranContainer = document.getElementById('data-restaurant')
     restaurant.forEach((restaurant) => {
       dataRestoranContainer.innerHTML += createRestaurantItemTemplate(restaurant)
     })
-    document.getElementsByTagName('loading-indicator')[0].removeAttribute('active')
   }
 }
 

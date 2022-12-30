@@ -1,6 +1,8 @@
 feature-list{
   display: block;
   background-color: var(--white-2);
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 feature-list > div{

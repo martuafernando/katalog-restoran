@@ -16,7 +16,7 @@ class AppBar extends HTMLElement {
   render () {
     this.classList.add('container')
     this.innerHTML += `
-      <img src="./images/logos/logo.png" width="150" alt="CariResto Logo">
+      <a href="#"><img src="./images/logos/logo.png" width="150" alt="CariResto Logo"></a>
       <a class="btn hamburger-menu" href="#" tabindex="0"><i class="fa-solid fa-bars"></i></a>
       <ul>
         <li><a href="#">Home</a></li>

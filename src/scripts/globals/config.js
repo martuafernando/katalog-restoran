@@ -4,7 +4,9 @@ const CONFIG = {
   CACHE_NAME: new Date().toISOString(),
   DATABASE_NAME: 'restaurant-catalogue-database',
   DATABASE_VERSION: 1,
-  OBJECT_STORE_NAME: 'restaurant'
+  OBJECT_STORE_NAME: 'restaurant',
+  LOADING_COMPONENT: 'loading-indicator',
+  ERROR_MODAL_COMPONENT: 'modal-error'
 }
 
 export default CONFIG

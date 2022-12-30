@@ -142,6 +142,11 @@ header > img{
 
 #list-restoran .item{
   position: relative;
+  transition: all 0.3s;
+}
+
+#list-restoran .item:hover{
+  transform: scale(1.2);
 }
 
 #list-restoran .item > img{

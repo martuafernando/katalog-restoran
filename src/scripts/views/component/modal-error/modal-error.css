@@ -1,0 +1,55 @@
+modal-error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(1px) brightness(50%);
+  z-index: 999;
+}
+
+modal-error > div{
+  display: block;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  border-radius: 16px;
+  transform: translate(-50%, -50%)!important;
+  background-color: var(--white-2);
+}
+
+modal-error .modal-header{
+  padding: 16px 24px;
+  border-radius: 16px 16px 0 0;
+  color: var(--white-2);
+  background-color: brown;
+}
+
+modal-error .modal-header button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  font-size: 24px;
+}
+
+modal-error .modal-body{
+  padding: 24px;
+  border-top: 1px solid var(--black-3);
+  border-bottom: 1px solid var(--black-3);
+}
+
+modal-error .modal-footer{
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+  padding: 16px 24px;
+}
+
+modal-error .modal-footer button:hover{
+  background-color: var(--black-3);
+}
+
+modal-error .modal-footer button{
+  font-weight: bold;
+}
