@@ -1,6 +1,7 @@
 const HamburgerInitiator = {
   init ({ button, navbar, content }) {
     button.addEventListener('click', (event) => {
+      event.preventDefault()
       this._toggleResponsive(event, navbar)
     })
 

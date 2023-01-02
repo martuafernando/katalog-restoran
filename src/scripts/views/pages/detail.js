@@ -6,7 +6,7 @@ import { createRestaurantDetailTemplate, createLikeButtonTemplate } from '../tem
 const Detail = {
   async render () {
     return `
-    <section class="container-fluid" id="detail">
+    <section class="container-fluid" id="detail" tabindex="0">
       <div class="container">
         <div id="data-restaurant"></div>
       </div>

@@ -1,7 +1,5 @@
 import dicodingRestaurantSource from '../../data/dicoding-restaurant-resource'
 import { createRestaurantItemTemplate } from '../templates/template-creator'
-import ErrorInitiator from '../../utils/error-initiator'
-import LoadingInitiator from '../../utils/loading-initiator'
 
 import '../component/feature-list/feature-list'
 
@@ -10,7 +8,7 @@ const All = {
     return `
     <feature-list class="container-fluid"></feature-list>
     <section class="container-fluid">
-      <div class="container" id="list-restoran">
+      <div class="container" id="list-restoran" tabindex="0">
         <h2>Mungkin Kamu Suka</h2>
         <p>Rekomendasi restoran untukmu</p>
         <div class="content" id="data-restaurant"> </div>

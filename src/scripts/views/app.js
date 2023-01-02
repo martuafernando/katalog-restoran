@@ -21,6 +21,14 @@ class App {
     })
   }
 
+  _skipToContentInit () {
+    const skipLinkElem = document.querySelector('.skip-link')
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault()
+      document.querySelector('#list-restoran').focus()
+    })
+  }
+
   async renderPage () {
     try {
       window.scroll(0, 0)
@@ -29,6 +37,7 @@ class App {
       const page = routes[url]
       this._content.innerHTML = await page.render()
       await page.afterRender()
+      this._skipToContentInit()
       LoadingInitiator.close()
     } catch (error) {
       LoadingInitiator.close()

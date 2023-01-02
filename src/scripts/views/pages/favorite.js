@@ -6,9 +6,9 @@ const Favorite = {
     return `
     <feature-list></feature-list>
     <section class="container-fluid">
-      <div class="container" id="list-restoran">
-        <h2>Mungkin Kamu Suka</h2>
-        <p>Restoran favorit kamu</p>
+      <div class="container" id="list-restoran" tabindex="0">
+        <h2>Restoran Favorit</h2>
+        <p>Restoran favorit yang kamu pilih</p>
         <div class="content" id="data-restaurant"> </div>
       </div>
     </section>
