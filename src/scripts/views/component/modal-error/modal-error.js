@@ -1,5 +1,4 @@
 import styleSheet from './modal-error.css'
-import ErrorInitiator from '../../../utils/error-initiator'
 
 const style = document.createElement('style')
 style.appendChild(document.createTextNode(styleSheet))

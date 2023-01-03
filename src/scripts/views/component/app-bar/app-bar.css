@@ -20,7 +20,7 @@ app-bar li:hover a{
   color: var(--purple);
 }
 
-app-bar > a:nth-of-type(3){
+app-bar > a:nth-of-type(2){
   display: none!important;
   font-weight: var(--semi-bold);
   color: var(--white-1)!important;
@@ -78,7 +78,7 @@ app-bar .hamburger-menu{
 }
 
 app-bar .hamburger-menu:hover,
-app-bar > a:nth-of-type(3):hover{
+app-bar > a:nth-of-type(2):hover{
   color: var(--purple)!important;
   background-color: var(--purple-2);
 }
@@ -88,7 +88,7 @@ app-bar > a:nth-of-type(3):hover{
     display: flex!important;
   }
 
-  app-bar > a:nth-of-type(3){
+  app-bar > a:nth-of-type(2){
     display: inline!important;
   }
 }
