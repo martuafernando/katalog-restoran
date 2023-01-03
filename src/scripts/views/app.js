@@ -25,7 +25,7 @@ class App {
     const skipLinkElem = document.querySelector('.skip-link')
     skipLinkElem.addEventListener('click', (event) => {
       event.preventDefault()
-      document.querySelector('#list-restoran').focus()
+      document.querySelector('#list-restoran') !== null ? document.querySelector('#list-restoran').focus() : document.querySelector('#mainContent').focus()
     })
   }
 
