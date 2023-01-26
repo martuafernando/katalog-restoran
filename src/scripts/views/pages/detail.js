@@ -2,6 +2,7 @@ import dicodingRestaurantSource from '../../data/dicoding-restaurant-resource'
 import UrlParser from '../../routes/url-parser'
 import LikeButtonInitiator from '../../utils/like-button-initiator'
 import { createRestaurantDetailTemplate, createLikeButtonTemplate } from '../templates/template-creator'
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb'
 
 const Detail = {
   async render () {
@@ -27,6 +28,7 @@ const Detail = {
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      favoriteRestaurants: FavoriteRestaurantIdb,
       restaurant
     })
     document.getElementsByTagName('loading-indicator')[0].removeAttribute('active')

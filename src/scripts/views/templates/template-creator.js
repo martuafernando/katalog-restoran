@@ -1,6 +1,5 @@
 import CONFIG from '../../globals/config'
 import ratingToStar from '../../utils/rating-to-star'
-import '../component/review-container/review-container'
 
 const createRestaurantItemTemplate = (restaurant) => `
 <a href="/#/detail/${restaurant.id}">
