@@ -17,7 +17,10 @@ class AppFooter extends HTMLElement {
 
   render () {
     this.innerHTML += `
-    <img src="./images/logos/logo-white.png" alt="">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./images/logos/logo-white-small.png">
+      <img src="./images/logos/logo-white-large.png" alt="">
+    </picture>
     <ul class="social-media">
       <li>
         <a href="https://www.instagram.com/martuafernando/" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>

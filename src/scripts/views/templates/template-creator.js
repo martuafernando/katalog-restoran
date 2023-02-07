@@ -4,7 +4,7 @@ import ratingToStar from '../../utils/rating-to-star'
 const createRestaurantItemTemplate = (restaurant) => `
 <a href="/#/detail/${restaurant.id}">
   <div class="item">
-    <img src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}" alt="${restaurant.name}">
+    <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}" alt="${restaurant.name}">
     <div class="deskripsi">
       <p class="h3">${restaurant.name}</p>
       <p class="kota">${restaurant.city}</p>
@@ -20,7 +20,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 const createRestaurantDetailTemplate = (restaurant) => `
 
 <h2>${restaurant.name}</h2>
-<img src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}" alt="${restaurant.name}" />
+<img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}" alt="${restaurant.name}" />
 <p class="star">
   ${ratingToStar(restaurant.rating)}
   <span class="small">(${restaurant.rating})</span>

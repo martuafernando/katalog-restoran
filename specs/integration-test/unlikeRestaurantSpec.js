@@ -12,20 +12,20 @@ describe('Unliking A Restaurant', () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 })
   })
 
-  afterEach(async () => {
-    await FavoriteRestaurantIdb.deleteRestaurant(1)
-  })
-
   it('should display unlike widget when the restaurant has been liked', async () => {
 
     expect(document.querySelector('[aria-label="unlike this restaurant"]'))
       .toBeTruthy()
+
+    await FavoriteRestaurantIdb.deleteRestaurant(1)
   })
 
   it('should not display like widget when the restaurant has been liked', async () => {
 
     expect(document.querySelector('[aria-label="like this restaurant"]'))
       .toBeFalsy()
+
+    await FavoriteRestaurantIdb.deleteRestaurant(1)
   })
 
   it('should be able to remove liked restaurant from the list', async () => {
@@ -33,6 +33,8 @@ describe('Unliking A Restaurant', () => {
     document.querySelector('[aria-label="unlike this restaurant"]').dispatchEvent(new Event('click'))
 
     expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([])
+
+    await FavoriteRestaurantIdb.deleteRestaurant(1)
   })
 
   it('should not throw error if the unliked restaurant is not in the list', async () => {
