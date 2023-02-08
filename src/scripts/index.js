@@ -12,10 +12,22 @@ import '../scripts/views/component/loading-indicator/loading-indicator'
 import '../scripts/views/component/modal-error/modal-error'
 
 // Font Awesome
-import '@fortawesome/fontawesome-free'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
+
+import('@fortawesome/fontawesome-free')
+  .then((module) => module.default)
+  .catch((error) => alert(error));
+
+import('@fortawesome/fontawesome-free/js/regular')
+  .then((module) => module.default)
+  .catch((error) => alert(error));
+  
+import('@fortawesome/fontawesome-free/js/brands')
+  .then((module) => module.default)
+  .catch((error) => alert(error));
+
+import('@fortawesome/fontawesome-free/js/solid')
+  .then((module) => module.default)
+  .catch((error) => alert(error));
 
 // Script
 import App from './views/app'
