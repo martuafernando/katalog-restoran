@@ -4,7 +4,7 @@ const LikeButtonInitiator = {
   async init ({ likeButtonContainer, favoriteRestaurants: FavoriteRestaurantIdb, restaurant }) {
     this._likeButtonContainer = likeButtonContainer
     this._restaurant = restaurant
-    this._favoriteRestaurants = FavoriteRestaurantIdb;
+    this._favoriteRestaurants = FavoriteRestaurantIdb
 
     await this._renderButton()
   },

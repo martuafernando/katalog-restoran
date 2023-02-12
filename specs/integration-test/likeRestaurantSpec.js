@@ -1,7 +1,6 @@
 import FavoriteRestaurantIdb from '../../src/scripts/data/favorite-restaurant-idb'
 import * as TestFactories from '../helpers/testFactories'
 
-
 const addLikeButtonContainer = () => {
   document.body.innerHTML = '<div id="likeButtonContainer"></div>'
 }
@@ -27,7 +26,7 @@ describe('Liking a restaurant', () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 })
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'))
-    
+
     await FavoriteRestaurantIdb.getRestaurant(1)
     const restaurant = await FavoriteRestaurantIdb.getRestaurant(1)
     expect(restaurant).toEqual({ id: 1 })
@@ -48,7 +47,7 @@ describe('Liking a restaurant', () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({})
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'))
-    
+
     expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([])
     document.querySelector('#likeButton').dispatchEvent(new Event('click'))
   })

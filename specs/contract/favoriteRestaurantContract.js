@@ -21,7 +21,7 @@ const itActsAsFavoriteRestaurantModel = (favoriteRestaurant) => {
     expect(await favoriteRestaurant.getAllRestaurants())
       .toEqual([
         { id: 1 },
-        { id: 2 },
+        { id: 2 }
       ])
   })
 
@@ -35,7 +35,7 @@ const itActsAsFavoriteRestaurantModel = (favoriteRestaurant) => {
     expect(await favoriteRestaurant.getAllRestaurants())
       .toEqual([
         { id: 2 },
-        { id: 3 },
+        { id: 3 }
       ])
   })
 
@@ -50,7 +50,7 @@ const itActsAsFavoriteRestaurantModel = (favoriteRestaurant) => {
       .toEqual([
         { id: 1 },
         { id: 2 },
-        { id: 3 },
+        { id: 3 }
       ])
   })
 }
