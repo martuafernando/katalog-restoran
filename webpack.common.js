@@ -46,10 +46,10 @@ module.exports = {
       plugins: [
         ImageminMozjpeg({
           quality: 50,
-          progressive: true,
-        }),
-      ],
-    }),
+          progressive: true
+        })
+      ]
+    })
     // new WorkboxWebpackPlugin.GenerateSW({
     //   swDest: path.resolve(__dirname, './sw.bundle.js')
     // })

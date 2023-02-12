@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config'
 import ratingToStar from '../../utils/rating-to-star'
 
 const createRestaurantItemTemplate = (restaurant) => `
-<a href="/#/detail/${restaurant.id}">
+<a href="./#/detail/${restaurant.id}">
   <div class="item">
     <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}" alt="${restaurant.name}">
     <div class="deskripsi">
