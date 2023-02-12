@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://martuafernando.github.io/katalog-restoran",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
@@ -10,7 +11,9 @@
     "test": "karma start",
     "lint": "eslint ./src",
     "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js"
+    "build-image": "node sharp.js",
+    "predeploy": "npm run build & npm run build-image",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "fernando <fernandosibarani45@gmail.com>",
@@ -28,6 +31,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-promise": "^6.1.1",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "http-server": "^14.1.1",
     "imagemin-mozjpeg": "^9.0.0",

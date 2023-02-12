@@ -1,8 +1,6 @@
 import styleSheet from './review-container.css'
 import dicodingRestaurantSource from '../../../data/dicoding-restaurant-resource'
 import UrlParser from '../../../routes/url-parser'
-// eslint-disable-next-line no-unused-vars
-import { async } from 'regenerator-runtime'
 import ReviewLoader from '../../../utils/review-loader'
 
 const style = document.createElement('style')
@@ -29,11 +27,14 @@ class ReviewContainer extends HTMLElement {
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     `
-    this.querySelector('button').addEventListener('click', async () => {
+    this.querySelector('button').addEventListener('click', async (event) => {
+      event.preventDefault()
+      document.getElementsByTagName('loading-indicator')[0].setAttribute('active', 'true')
       const url = UrlParser.parseActiveUrlWithoutCombiner()
       const name = this.querySelector('#name').value
       const review = this.querySelector('#review').value
       ReviewLoader(await dicodingRestaurantSource.sendReview(url.id, name, review))
+      document.getElementsByTagName('loading-indicator')[0].removeAttribute('active')
     })
   }
 }

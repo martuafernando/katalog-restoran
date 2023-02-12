@@ -16,13 +16,16 @@ body{
   font-size: var(--font-size-6);
 }
 
-a, button{
+a, button, textarea, input{
   text-decoration: none;
   color: inherit;
   transition: all 0.3s;
   box-sizing: border-box;
   min-width: 44px;
   min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a:hover, button:hover{
