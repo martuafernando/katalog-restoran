@@ -19,7 +19,7 @@ class AppBar extends HTMLElement {
       <a href="#">
         <picture>
           <source media="(max-width: 600px)" srcset="./images/logos/logo-small.png">
-          <img src="./images/logos/logo-large.png" width="150" alt="CariResto Logo">
+          <img src="./images/logos/logo-large.png" width="150" height="45" alt="CariResto Logo">
         </picture>
       </a>
       <button class="btn hamburger-menu" tabindex="0"><i class="fa-solid fa-bars"></i></button>

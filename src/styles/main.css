@@ -154,7 +154,7 @@ header > picture source{
 }
 
 #list-restoran .item:hover{
-  transform: scale(1.2);
+  filter: brightness(0.8);
 }
 
 #list-restoran .item > img{

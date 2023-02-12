@@ -19,7 +19,7 @@ class AppFooter extends HTMLElement {
     this.innerHTML += `
     <picture>
       <source media="(max-width: 600px)" srcset="./images/logos/logo-white-small.png">
-      <img src="./images/logos/logo-white-large.png" alt="">
+      <img width="200" height="65" src="./images/logos/logo-white-large.png" alt="">
     </picture>
     <ul class="social-media">
       <li>
